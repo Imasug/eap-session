@@ -20,7 +20,7 @@ public class WelcomeController {
 	}
 
 	@GetMapping("/")
-	public ModelAndView get(ModelAndView mav) {
+	public ModelAndView get(@ModelAttribute WelcomeForm form, ModelAndView mav) {
 		System.out.println("get");
 		mav.setViewName("index");
 		return mav;
