@@ -6,6 +6,9 @@ import lombok.Data;
 
 @Data
 public class WelcomeForm implements Serializable {
+
+	private static final long serialVersionUID = -8803644893483771079L;
+
 	private String input1;
 	private String input2;
 	private String input3;
