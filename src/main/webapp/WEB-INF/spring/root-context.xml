@@ -11,8 +11,4 @@
 
 	<context:annotation-config />
 
-	<!-- Spring Session -->
-	<bean name="sessionConfig"
-		class="jp.co.ocp.sample.spring_session.config.SessionConfig" />
-
 </beans>
