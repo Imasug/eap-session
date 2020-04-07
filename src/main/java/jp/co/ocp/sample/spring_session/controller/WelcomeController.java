@@ -1,5 +1,8 @@
 package jp.co.ocp.sample.spring_session.controller;
 
+import java.net.InetAddress;
+import java.net.UnknownHostException;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -24,9 +27,10 @@ public class WelcomeController {
 	}
 
 	@PostMapping("/")
-	public ModelAndView post(@ModelAttribute WelcomeForm form, ModelAndView mav) {
+	public ModelAndView post(@ModelAttribute WelcomeForm form, ModelAndView mav) throws UnknownHostException {
 		System.out.println("post");
 		System.out.println(form);
+		System.out.println(InetAddress.getLocalHost().getHostName());
 		mav.setViewName("redirect:/");
 		return mav;
 	}
